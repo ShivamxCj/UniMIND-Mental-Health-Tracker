@@ -1,8 +1,4 @@
 UniMIND - Mental Health Support System
-https://img.shields.io/badge/UniMIND-Mental%2520Health%2520Support-blue?style=for-the-badge
-https://img.shields.io/badge/React-18.2.0-blue?style=flat-square
-https://img.shields.io/badge/FastAPI-0.104.1-green?style=flat-square
-https://img.shields.io/badge/TailwindCSS-3.3.0-38B2AC?style=flat-square
 
 A comprehensive digital mental health and psychological support system designed for students in higher education institutions. UniMIND provides accessible mental health screening, resources, and professional support in a stigma-free environment.
 
