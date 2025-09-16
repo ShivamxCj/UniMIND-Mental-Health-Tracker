@@ -42,7 +42,7 @@ const Chatbot = ({ onClose }) => {
   }
 
   return (
-    <div className="fixed bottom-24 right-6 w-80 bg-white rounded-lg shadow-xl border border-gray-200">
+    <div className="fixed bottom-10 right-6 w-80 bg-white rounded-lg shadow-xl border border-gray-200">
       {/* Header */}
       <div className="bg-indigo-600 text-white p-4 rounded-t-lg flex justify-between items-center">
         <div>

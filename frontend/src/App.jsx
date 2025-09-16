@@ -9,6 +9,7 @@ import WellnessResources from './components/WellnessResources'
 import Layout from './components/Layout'
 import AdminDashboard from './components/AdminDashboard'
 import ConsultantDashboard from './components/ConsultantDashboard'
+import CommunityForum from './components/CommunityForum' // 👈 Import forum component
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/test/gad7" element={<Layout><GAD7Test /></Layout>} />
         <Route path="/appointments" element={<Layout><AppointmentBooking /></Layout>} />
         <Route path="/resources" element={<Layout><WellnessResources /></Layout>} />
+        <Route path="/forum" element={<Layout><CommunityForum /></Layout>} /> {/* 👈 Forum route */}
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/consultant" element={<ConsultantDashboard />} />
       </Routes>
