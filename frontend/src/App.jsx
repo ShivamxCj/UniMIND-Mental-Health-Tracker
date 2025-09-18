@@ -9,13 +9,16 @@ import WellnessResources from './components/WellnessResources'
 import Layout from './components/Layout'
 import AdminDashboard from './components/AdminDashboard'
 import ConsultantDashboard from './components/ConsultantDashboard'
-import CommunityForum from './components/CommunityForum' // 👈 Import forum component
+import ConsultantAppointments from './components/ConsultantAppointments'
+import ConsultantMessages from './components/ConsultantMessages'
+import CommunityForum from './components/CommunityForum' 
 import ReportsPage from './components/ReportsPage'
 
 function App() {
   return (
     <Router>
       <Routes>
+        {/* Student side */}
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Layout><Dashboard /></Layout>} />
         <Route path="/tests" element={<Layout><TestSelection /></Layout>} />
@@ -23,13 +26,20 @@ function App() {
         <Route path="/test/gad7" element={<Layout><GAD7Test /></Layout>} />
         <Route path="/appointments" element={<Layout><AppointmentBooking /></Layout>} />
         <Route path="/resources" element={<Layout><WellnessResources /></Layout>} />
-        <Route path="/forum" element={<Layout><CommunityForum /></Layout>} /> {/* 👈 Forum route */}
+        <Route path="/forum" element={<Layout><CommunityForum /></Layout>} />
+
+        {/* Admin side */}
         <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/consultant" element={<ConsultantDashboard />} />
         <Route path="/admin/reports" element={<ReportsPage />} />
+
+        {/* Consultant side */}
+        <Route path="/consultant" element={<ConsultantDashboard />} />
+        <Route path="/consultant/appointments" element={<ConsultantAppointments />} />
+        <Route path="/consultant/messages" element={<ConsultantMessages />} />
       </Routes>
     </Router>
   )
 }
 
 export default App
+

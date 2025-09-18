@@ -22,22 +22,38 @@ const ConsultantDashboard = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-blue-50 p-4 rounded-lg">
+            {/* Appointments Card */}
+            <div 
+              onClick={() => navigate('/consultant/appointments')}
+              className="bg-blue-50 p-4 rounded-lg cursor-pointer hover:shadow-md transition"
+            >
               <h2 className="text-lg font-semibold text-blue-800 mb-2">Appointments</h2>
               <p className="text-blue-700">View and manage your counseling schedule</p>
             </div>
             
-            <div className="bg-green-50 p-4 rounded-lg">
+            {/* Students Card */}
+            <div 
+              onClick={() => navigate('/consultant/students')}
+              className="bg-green-50 p-4 rounded-lg cursor-pointer hover:shadow-md transition"
+            >
               <h2 className="text-lg font-semibold text-green-800 mb-2">Students</h2>
               <p className="text-green-700">Access student profiles and test results</p>
             </div>
             
-            <div className="bg-purple-50 p-4 rounded-lg">
+            {/* Messages Card */}
+            <div 
+              onClick={() => navigate('/consultant/messages')}
+              className="bg-purple-50 p-4 rounded-lg cursor-pointer hover:shadow-md transition"
+            >
               <h2 className="text-lg font-semibold text-purple-800 mb-2">Messages</h2>
               <p className="text-purple-700">Communicate with students securely</p>
             </div>
             
-            <div className="bg-orange-50 p-4 rounded-lg">
+            {/* Resources Card */}
+            <div 
+              onClick={() => navigate('/consultant/resources')}
+              className="bg-orange-50 p-4 rounded-lg cursor-pointer hover:shadow-md transition"
+            >
               <h2 className="text-lg font-semibold text-orange-800 mb-2">Resources</h2>
               <p className="text-orange-700">Access counseling materials and guides</p>
             </div>
