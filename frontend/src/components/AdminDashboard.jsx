@@ -13,7 +13,8 @@ const AdminDashboard = () => {
       title: 'Analytics & Reports',
       description: 'View student mental health trends and insights',
       icon: BarChart3,
-      color: 'bg-blue-500'
+      color: 'bg-blue-500',
+      link: '/admin/reports'   // 👈 Added link
     },
     {
       title: 'Student Management',
@@ -66,7 +67,11 @@ const AdminDashboard = () => {
           {adminFeatures.map((feature, index) => {
             const Icon = feature.icon
             return (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <div
+                key={index}
+                onClick={() => feature.link && navigate(feature.link)} // 👈 Navigate if link exists
+                className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow cursor-pointer"
+              >
                 <div className={`w-12 h-12 ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <Icon className="w-6 h-6 text-white" />
                 </div>

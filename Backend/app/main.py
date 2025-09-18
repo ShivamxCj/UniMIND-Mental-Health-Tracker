@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes import tests, appointments, resources
 from app.database import engine, Base
+from app.routes import mental_health
+
+
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
@@ -26,6 +29,7 @@ app.add_middleware(
 app.include_router(tests.router, prefix="/tests", tags=["Mental Health Tests"])
 app.include_router(appointments.router, prefix="/appointments", tags=["Appointments"])
 app.include_router(resources.router, prefix="/resources", tags=["Wellness Resources"])
+app.include_router(mental_health.router, prefix="/mh", tags=["Mental Health"])
 
 @app.get("/")
 def root():

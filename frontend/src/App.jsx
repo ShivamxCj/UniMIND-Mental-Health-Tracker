@@ -10,6 +10,7 @@ import Layout from './components/Layout'
 import AdminDashboard from './components/AdminDashboard'
 import ConsultantDashboard from './components/ConsultantDashboard'
 import CommunityForum from './components/CommunityForum' // 👈 Import forum component
+import ReportsPage from './components/ReportsPage'
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/forum" element={<Layout><CommunityForum /></Layout>} /> {/* 👈 Forum route */}
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/consultant" element={<ConsultantDashboard />} />
+        <Route path="/admin/reports" element={<ReportsPage />} />
       </Routes>
     </Router>
   )
